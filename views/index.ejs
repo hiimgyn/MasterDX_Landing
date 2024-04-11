@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MasterDX Agency">
+    <meta name="keywords" content="agency, manpower, master, masterdx, best">
+    <meta name="author" content="Gyn">
+
+    <title>MasterDX</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+        rel="stylesheet">
+    <!--====== animate css ======-->
+    <link rel="stylesheet" href="/css/animate.min.css">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="/css/slick.css">
+
+    <!-- modernizr js -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Loading Bar Start -->
+    <div id="loading-wrap">
+        <div class="loading-effect"></div>
+    </div>
+    <!-- Loading Bar End -->
+
+    <!-- Header Section Start -->
+    <header class="header-style-1 hamburgler-menu">
+        <div class="header-top active-sticky">
+            <div class="container">
+                <div class="row">
+
+                    <div class="headerMenu">
+                        <div class="logo left">
+                            <a href="#"><img src="img/masterDX.png" alt="MasterDX" />
+                            </a>
+                        </div>
+
+                        <div class="languageright">
+                            <a href=""
+                                onclick="changeLanguage('<%= i18n.getLocale() === 'en' ? 'vi' : 'en' %>'); return false;">
+                                <% if (i18n.getLocale()==='vi' ) { %>
+                                    <img class="flag" src="img/uk.svg" alt="UK Flag" data-toggle="tooltip"
+                                        data-placement="bottom" title="English" />
+                                    <% } else if (i18n.getLocale()==='en' ) { %>
+                                        <img class="flag" src="img/vietnam.svg" alt="Vietnam Flag" data-toggle="tooltip"
+                                            data-placement="bottom" title="Vietnamese" />
+                                        <% } %>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </header>
+    <!-- Header Space -->
+    <!-- Header Section End -->
+
+    <!-- Slider Section Start -->
+    <div id="particles-bg" class="slider-area slider-one bg-color-2 relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="slider-caption">
+                        <h1>
+                            <%= i18n.__('firstCaption') %> <br />
+                                <%= i18n.__('secondCaption') %><span class="theme-color">
+                                        <%= i18n.__('highlightCaption') %>
+                                    </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Section End -->
+    <!--====== OVERVIEW PART START ======-->
+
+    <div class="overview-area style1 section-ptb white-bg">
+        <div class="container">
+            <div class="col-xs-12 text-center">
+                <div class="section-title black pb-80">
+                    <h2 class="mb-15">
+                        <%= i18n.__('serviceTitle') %> <span class="theme-color">
+                                <%= i18n.__('secondserviceTitle') %>
+                            </span>
+                    </h2>
+                    <p>
+                        <%= i18n.__('serviceText') %>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="overview-counter-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms"
+                        data-wow-delay="0ms">
+                        <div class="icon">
+                            <img class="fal fa-users fa-5x theme-color" style=" line-height: 110%" src="" alt="">
+                        </div>
+                        <h3 class="title"><span class="count">
+                                <%= i18n.__('exNum') %>
+                            </span>+</h3>
+                        <span>
+                            <%= i18n.__('exTitle') %>
+                        </span>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="overview-counter-item mt-30 animated wow fadeInUp" data-wow-duration="1200ms"
+                        data-wow-delay="300ms">
+                        <div class="icon">
+                            <img class="fal fa-user-headset fa-5x theme-color" style=" line-height: 110%" src="" alt="">
+                        </div>
+
+                        <h3 class="title"><span class="count">
+                                <%= i18n.__('proNum') %>
+                            </span>+</h3>
+                        <span>
+                            <%= i18n.__('proTitle') %>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="overview-counter-item mt-30 animated wow fadeInUp" data-wow-duration="1400ms"
+                        data-wow-delay="600ms">
+                        <div class="icon">
+                            <img class="fa-regular fa-file fa-5x theme-color" style=" line-height: 110%" src="" alt="">
+                        </div>
+                        <h3 class="title count">
+                            <%= i18n.__('awardNum') %>
+                        </h3>
+                        <span>
+                            <%= i18n.__('awardTitle') %>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="overview-counter-item mt-30 animated wow fadeInUp" data-wow-duration="1600ms"
+                        data-wow-delay="900ms">
+                        <div class="icon">
+                            <img class="fa-regular fa-calendar-check fa-5x theme-color" style=" line-height: 110%"
+                                src="" alt="">
+                        </div>
+                        <h3 class="title"><span class="count">
+                                <%= i18n.__('socialNum') %>
+                            </span></h3>
+                        <span>
+                            <%= i18n.__('socialTitle') %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section Start -->
+    <div class="service-area style1 section-ptb drak-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="section-title white pb-80">
+                        <h2 class="mb-15">
+                            <%= i18n.__('serviceTitle') %> <span class="theme-color">
+                                    <%= i18n.__('secondserviceTitle') %>
+                                </span>
+                        </h2>
+                        <p>
+                            <%= i18n.__('serviceText') %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-30">
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-bullhorn"> </i>
+                        <h4>
+                            <%= i18n.__('os1Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os1Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="far fa-calendar-alt"></i>
+                        <h4>
+                            <%= i18n.__('os2Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os2Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>
+                            <%= i18n.__('os3Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os3Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-users"></i>
+                        <h4>
+                            <%= i18n.__('os4Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os4Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+            </div>
+            <div class="row mb-30">
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h4>
+                            <%= i18n.__('os5Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os5Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-list-alt"></i>
+                        <h4>
+                            <%= i18n.__('os6Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os6Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-search"></i>
+                        <h4>
+                            <%= i18n.__('os7Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os7Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-users-cog"></i>
+                        <h4>
+                            <%= i18n.__('os8Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os8Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+            </div>
+            <div class="row mb-30">
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-user-plus"></i>
+                        <h4>
+                            <%= i18n.__('os9Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os9Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30 tab-mb-50">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-tools"></i>
+                        <h4>
+                            <%= i18n.__('os10Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os10Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3 mobi-mb-30">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>
+                            <%= i18n.__('os11Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os11Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="service-box bg-color-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>
+                            <%= i18n.__('os12Title') %>
+                        </h4>
+                        <p>
+                            <%= i18n.__('os12Text') %>
+                        </p>
+                    </div>
+                </div>
+                <!-- Single Service End -->
+            </div>
+        </div>
+    </div>
+    <!-- Services Section End -->
+
+    <!-- Portfolio Section Start -->
+    <div class="portfolio-area style-2 column-3 white-bg section-pt pb-80 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="section-title black pb-80">
+                        <h2 class="mb-15">
+                            <%= i18n.__('projectTitle') %> <span class="theme-color">
+                                    <%= i18n.__('secondprojectTitle') %>
+                                </span>
+                        </h2>
+                        <p>
+                            <%= i18n.__('projectText') %>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+
+                    <div class="portfolio-grid masonry-grid">
+                        <div class="grid-item business design percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/1.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/1.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Minimal Design</h4>
+                                            </a>
+                                            <p>Print, develop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative develop percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/2.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/2.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Rendered Kitchen</h4>
+                                            </a>
+                                            <p>business, Ux</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item develop design percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/3.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/3.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>New Architecture</h4>
+                                            </a>
+                                            <p>business, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative business percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/4.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/4.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Mug Mockup</h4>
+                                            </a>
+                                            <p>creative, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative design percent-50 load-more">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/2.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/2.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>App Landing</h4>
+                                            </a>
+                                            <p>App, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative percent-50 load-more">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/1.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/1.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>T shart Hanger</h4>
+                                            </a>
+                                            <p>business, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item business design percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/1.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/1.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Minimal Design</h4>
+                                            </a>
+                                            <p>Print, develop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative develop percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/2.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/2.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Rendered Kitchen</h4>
+                                            </a>
+                                            <p>business, Ux</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item develop design percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/3.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/3.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>New Architecture</h4>
+                                            </a>
+                                            <p>business, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative business percent-50">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/4.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/4.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>Mug Mockup</h4>
+                                            </a>
+                                            <p>creative, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative design percent-50 load-more">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/2.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/2.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>App Landing</h4>
+                                            </a>
+                                            <p>App, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                        <div class="grid-item creative percent-50 load-more">
+                            <div class="single-portfolio">
+                                <img src="img/portfolio/2/masonry/1.jpg" alt="Gimri" />
+                                <div class="project-title white-bg text-center">
+                                    <div class="d-table">
+                                        <div class="d-table-cell">
+                                            <a class="venobox" data-gall="gall-img"
+                                                href="img/portfolio/2/masonry/1.jpg">
+                                                <img src="img/icons/zoom.png" alt="Plus Icon" />
+                                            </a>
+                                            <a href="portfolio-details-2.html">
+                                                <h4>T shart Hanger</h4>
+                                            </a>
+                                            <p>business, Design</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item End -->
+                    </div>
+                    <div class="view-all text-center">
+                        <a class="btn theme-btn mt-80" id="load-more-btn" href="javascript:void(0)">Load More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Section End -->
+    <!--====== BRAND 3 PART START ======-->
+
+    <div id="brand" class="brand-3-area mt-50">
+        <div class="container">
+            <div class="col-xs-12 text-center">
+                <div class="section-title black pb-80">
+                    <h2 class="mb-15">
+                        <%= i18n.__('brandTitle') %> <span class="theme-color">
+                                <%= i18n.__('secondbrandTitle') %>
+                            </span>
+                    </h2>
+                    <p>
+                        <%= i18n.__('brandText') %>
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-50">
+                <div class="col-xs-12">
+                    <div class="brand-3-items d-flex justify-content-between brand-slider" id="brandSlider">
+                        <!-- The brand items will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== BRAND 3 PART ENDS ======-->
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="footer-widget-area drak-bg ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-5 mobi-mb-30">
+                        <div class="footer-widget about">
+                            <div class="title mb-20">
+                                <a href="#"><img src="img/masterDX.png" alt="MasterDX" /></a>
+                            </div>
+                            <p>
+                                <%= i18n.__('about') %>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.Widget end -->
+                    <div class="col-xs-12 col-sm-4 col-md-4 mobi-mb-30">
+                        <div class="footer-widget address">
+                            <div class="title mb-20">
+                                <h4>
+                                    <%= i18n.__('contact') %>
+                                </h4>
+                            </div>
+                            <ul>
+                                <li><span>
+                                        <%= i18n.__('phoneTitle') %> :
+                                    </span>
+                                    <%= i18n.__('phoneNumber') %>
+                                </li>
+                                <li><span>
+                                        <%= i18n.__('emailTitle') %> :
+                                    </span> <a href="mailto:personalinfo@mail.com">
+                                        <%= i18n.__('email') %>
+                                    </a>
+                                </li>
+                                <li class="mb-10"><span>Address:</span>
+                                    <%= i18n.__('address') %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.Widget end -->
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="footer-widget social-media">
+                            <div class="title mb-20">
+                                <h4>
+                                    <%= i18n.__('social') %>
+                                </h4>
+                            </div>
+                            <div class="social-link">
+                                <ul class="clearfix d-inblock">
+                                    <li><a href="#" target="_blank"><i class="zmdi zmdi-facebook"></i> Facebook</a></li>
+                                </ul>
+                            </div>
+                            <!-- Change your social media link -->
+                        </div>
+                    </div>
+                    <!-- /.Widget end -->
+                </div>
+            </div>
+        </div>
+        <!-- /.Widget Area End -->
+        <div class="copyright black-bg ptb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="text">
+                            <p>&copy; <%= i18n.__('credits') %> <a href="https://gyginee.com" target="_blank"> |
+                                        Gyn</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- All JS Here -->
+    <!-- jQuery Latest Version -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="js/plugins.js"></script>
+    <!--====== wow js ======-->
+    <script src="/js/wow.js"></script>
+    <!--====== Slick js ======-->
+    <script src="/js/slick.min.js"></script>
+    <!--====== appear js ======-->
+    <script src="/js/jquery.appear.min.js"></script>
+    <!--====== Magnific Popup js ======-->
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- main JS -->
+    <script src="/js/main.js"></script>
+</body>
