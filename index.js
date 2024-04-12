@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-console.log('Current locale: ', i18n.getLocale());
+//console.log('Current locale: ', i18n.getLocale());
 
 app.get('/setLanguage/:locale', (req, res) => {
     const { locale } = req.params;

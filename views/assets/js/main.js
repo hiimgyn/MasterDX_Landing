@@ -438,51 +438,45 @@ if ($(".wow").length) {
 /*===============================  
 		 Brands
 ================================*/
-const brands = [
-	"abbank.svg",
-	"bacabank.svg",
-	"bhin.svg",
-	"BIDV.svg",
-	"british.svg",
-	"cfvg.svg",
-	"flamingo.svg",
-	"flc.svg",
-	"fpt.svg",
-	"hdmon.svg",
-	"ila.svg",
-	"jetstar.svg",
-	"kinder.svg",
-	"masteri.svg",
-	"mbbank.svg",
-	"mobifone.svg",
-	"qantas.svg",
-	"rakuten.svg",
-	"rmit.svg",
-	"sendo.svg",
-	"sungrand.svg",
-	"sunpremier.svg",
-	"techcom.svg",
-	"thaiair.svg",
-	"tigerair.svg",
-	"topica.svg",
-	"vatgia.svg",
-	"vib.svg",
-	"viettel.svg",
-	"vina.svg",
-	"vjair.svg",
-	"vnpt.svg",
-];
-
 const brandSlider = document.getElementById("brandSlider");
 
-brands.forEach((brand) => {
-	const item = document.createElement("div");
-	item.classList.add("item");
-	item.innerHTML = `
-        <a href="#"><img class="clients" src="/img/brand/clients/${brand}" alt=""></a>
-    `;
-	brandSlider.appendChild(item);
-});
+// List of image filenames
+const imageFiles = [
+    "abinbev.png",
+    "amos.png",
+    "baby.png",
+    "beau.png",
+    "diag.png",
+    "foodeli.png",
+    "jti.png",
+    "lenovo.png",
+    "mi.png",
+    "mutosi.png",
+    "neu.png",
+    "newchoice.png",
+    "old.png",
+    "san.png",
+    "swiss.png",
+    "swisse.png",
+    "syngenta.png",
+    "tcl.png",
+    "tripi.png",
+    "vnpay.png"
+];
+
+// Function to display images
+function displayImages() {
+    imageFiles.forEach(image => {
+        const item = document.createElement("div");
+        item.classList.add("item");
+        item.innerHTML = `<a href="#"><img class="clients" src="/img/brand/${image}" alt=""></a>`;
+        brandSlider.appendChild(item);
+    });
+}
+
+// Call the function to display images
+displayImages();
+
 
 /*===============================  
 			 screenshot ACTIVE SLICK JS

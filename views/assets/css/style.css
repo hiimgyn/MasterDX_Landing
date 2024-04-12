@@ -3518,49 +3518,37 @@ hr.devider {
 /*====================================================================
 						BRAND
 ======================================================================*/
-
-.brand-3-area {
-    background: #fff;
-    padding-top: 100px;
-    padding-bottom: 100px;
+.brand-3-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
 }
 
-@media (max-width: 767px) {
-    .brand-3-items {
-        flex-wrap: wrap;
-    }
+.brand-3-items .item {
+    flex: 1; /* distribute width evenly */
+    max-width: calc(70% - 20px); /* ensure each item occupies 1/2 of the width with margin */
+    text-align: center; /* center content */
+    margin: 10px; /* space between items */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .brand-3-items .item {
-        margin: 0 25px;
-    }
-}
-
+/* Making adjustments for smaller screens */
 @media (max-width: 767px) {
     .brand-3-items .item {
-        margin: 15px 40px;
+        max-width: calc(130% - 20px); /* Display 2 items per row on smaller screens */
     }
 }
 
+
+/* Hover effect for logos */
 .brand-3-items .item a {
-    opacity: .5;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 
 .brand-3-items .item a:hover {
     opacity: 1;
 }
-
-.brand-9-area .brand-3-items .item a img {
-    opacity: .5;
-}
-
-.clients {
-    height: 150px;
-    width: 150px;
-    /* Adjust width according to your requirement */
-}
-
 
 /*====================================================================
 							Flag
