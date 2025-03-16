@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
     });
 });
 
-const http = require('http');
+/* const http = require('http');
 const httpProxy = require('http-proxy');
 const targetHost = 'localhost';
 const targetPort = 3000;
@@ -51,10 +51,10 @@ const server = http.createServer((req, res) => {
   proxy.web(req, res);
 });
 
-/* server.listen(3000, () => {
-    console.log('Proxy server listening on port 3000');
-}); */
-
+    //server.listen(3000, () => {
+    //console.log('Proxy server listening on port 3000');
+}); 
+ */
 app.listen(PORT, () => {
     //console.log(`Server is running on port ${PORT}`);
 });
