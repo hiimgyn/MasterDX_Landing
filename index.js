@@ -18,8 +18,6 @@ app.use((req, res, next) => {
     next();
 });
 
-//console.log('Current locale: ', i18n.getLocale());
-
 app.get('/setLanguage/:locale', (req, res) => {
     const { locale } = req.params;
     if (i18n.getLocales().includes(locale)) {
@@ -37,29 +35,8 @@ app.get('/', (req, res) => {
     });
 });
 
-/* const http = require('http');
-const httpProxy = require('http-proxy');
-const targetHost = 'localhost';
-const targetPort = 3000;
 
-
-const proxy = httpProxy.createProxyServer({
-  target: `http://${targetHost}:${targetPort}`
-});
-
-const server = http.createServer((req, res) => {
-  proxy.web(req, res);
-});
-
-    //server.listen(3000, () => {
-    //console.log('Proxy server listening on port 3000');
-}); 
- 
 app.listen(PORT, () => {
-    //console.log(`Server is running on port ${PORT}`);
-});
-*/
-app.listen(PORT, () => {
-    //console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
 module.exports = app;
